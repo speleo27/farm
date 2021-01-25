@@ -1,0 +1,82 @@
+// base de données pour la ferme 
+
+Table connect{
+    connect_id int [pk,increment]
+    connect_pseudo varchar
+    connect_email varchar
+}
+
+table account{
+    account_id int [pk,increment]
+    connect_id int
+    account_name varchar
+    account_status int   
+    account_amount int // virtual money
+}
+table sector{
+    sector_id int [pk,increment]
+    sector_name varchar
+
+}
+table farm{
+    farm_id int [pk,increment]
+    connect_id int
+    farm_name varchar
+    animal_id int
+    building_id int
+    sector_id int
+    farm_value int //count  of all value in farm
+    buy_id int
+
+}
+table animal{
+    animal_id int [pk, increment]
+    animal_name int
+    animal_species int
+    animals_life int
+    animal_property1 int
+    animal_property2 int
+    animal_food1 int
+    animal_food2 int
+    animal_benefit varchar
+    animal_value int
+}
+
+table specie{
+    specie_id int [pk, increment]
+    specie_name varchar
+}
+table property{
+    property_id int [pk,increment]
+    property_name varchar
+    property_action varchar
+    property_point int
+}
+
+table building{
+    building_id int [pk, increment]
+    building_name varchar
+    building_price int 
+    status_id int
+}
+
+table food{
+    food_id int [pk,increment]
+    food_name varchar
+    food_value int
+    food_price int
+}
+
+table techno{
+    techno_id int [pk, increment]
+    techno_name varchar
+    techno_value int 
+    techno_price int 
+}
+table status{
+    status_id int [pk, increment]
+    status_name varchar
+
+}
+
+
