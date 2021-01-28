@@ -17,10 +17,11 @@ if($emaildb != $_POST['email']){
     ));
     $accountId = $bdd->lastInsertId();
 
-    $req2 = $bdd->prepare("INSERT INTO account(connect_id,account_name) VALUES (:connect_id, :account_name)");
+    $req2 = $bdd->prepare("INSERT INTO account(connect_id,account_name,account_amount) VALUES (:connect_id, :account_name, :account_amount)");
     $req2->execute(array(
         'connect_id' => $accountId,
-        'account_name' => htmlspecialchars($_POST['name'])
+        'account_name' => htmlspecialchars($_POST['name']),
+        'account_amount'=> 2000
     ));
 
     $req3 = $bdd->prepare("INSERT INTO farm(connect_id,farm_name) VALUES (:connect_id, :farm_name)");
