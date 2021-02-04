@@ -38,6 +38,7 @@ if(isset($_POST['btnconnect']))
                
                 $_SESSION['user']=$data;
                     //echo 'connecter en user';
+                    
                     header('Location:../game.php');
             }
             else

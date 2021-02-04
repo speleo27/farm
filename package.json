@@ -1,0 +1,19 @@
+{
+  "name": "projet_final_php",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/speleo27/farm.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/speleo27/farm/issues"
+  },
+  "homepage": "https://github.com/speleo27/farm#readme",
+  "description": ""
+}

@@ -5,7 +5,7 @@ include 'connectdb.php';
 $reqctrl=$bdd->prepare("SELECT connect_email from connect");
 $reqctrl->execute(array());
 $emaildb= $reqctrl->fetch();
-var_dump($emaildb);
+//var_dump($emaildb);
 if($emaildb != $_POST['email']){
     
 
@@ -21,7 +21,7 @@ if($emaildb != $_POST['email']){
     $req2->execute(array(
         'connect_id' => $accountId,
         'account_name' => htmlspecialchars($_POST['name']),
-        'account_amount'=> 2000
+        'account_amount'=> 150
     ));
 
     $req3 = $bdd->prepare("INSERT INTO farm(connect_id,farm_name) VALUES (:connect_id, :farm_name)");
