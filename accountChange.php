@@ -1,8 +1,8 @@
 <?php
-include 'template/header.php';
+require_once './template/header.php';
 $req = $bdd->prepare("SELECT * from connect inner join account on (account.connect_id= connect.connect_id) WHERE connect.connect_id=? ");
 $req->execute(array(
-    $_GET['connect_id']
+  $_SESSION['user']['connect_id']
 ));
 $data = $req->fetch();
 //var_dump($data);

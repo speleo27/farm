@@ -1,5 +1,5 @@
 <?php
-include 'template/header.php';
+require_once 'template/header.php';
 
 ?>
 <div class="container">
@@ -39,9 +39,10 @@ include 'template/header.php';
     <button type="submit" class="btn btn-primary">Envoyer</button>
   </form>
 </div>
+
 <script>
-$(document).ready(function () {
-  
-});
+
 
 </script>
+<?php require_once 'template/footer.php';
+?>

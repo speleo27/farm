@@ -11,5 +11,5 @@ include "template/header.php";
 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam, fuga officiis. Ut rem, adipisci error nostrum, iure cum modi accusamus magnam deserunt aut repellendus vero neque possimus quam eveniet nihil. Lorem ipsum dolor sit amet consectetur adipisicing elit. Est magnam voluptatem vero sint optio, id mollitia, quis saepe, placeat quaerat minus? Minima unde possimus inventore doloribus autem laboriosam id numquam.</p>
 </div>
 
-
+<?php include 'template/footer.php';
     

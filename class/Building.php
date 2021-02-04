@@ -26,12 +26,12 @@ class Building{
         // insertion du batiment dans la table farm
        global $bdd;
         //var_dump($_SESSION['user']['connect_id']);
-        var_dump($id);
-       $req=$bdd->prepare('UPDATE farm set (building_id=?) WHERE connect_id=?');
+        //var_dump($id);
+       $req=$bdd->prepare('INSERT INTO  farmBuildings (farm_id, building_id) VALUES(?,?)');
        $req->execute(array(
-            $id,
-           intval($_SESSION['user']['connect_id'])
-
+          intval($_POST['farm_id']) ,
+          intval($id)
+          
        )); 
     //  recupération du solde joueur
        $req = $bdd ->prepare('SELECT account_amount from account WHERE connect_id=?');
